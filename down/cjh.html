@@ -3,9 +3,11 @@
 <meta name=force-rendering content=webkit>
 <meta http-equiv=X-UA-Compatible content="IE=Edge,chrome=1">
 <meta name=viewport content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Refresh" content="" />
 <title> 准备访问……</title>
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript">
+	
 	function GetQueryString(name) {
 		          var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
 		          var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
@@ -17,8 +19,9 @@
 		     r = null; 
 		     return context == null || context == "" || context == "undefined" ? "" : context; 
 		  }
-		  var s=GetQueryString("s")||0;
+		  var s=GetQueryString("s")||'/blog';
 		  var title=GetQueryString("title")||0;
+	$('meta[http-equiv="Refresh"]').attr('content',"10;url=https://cjh0613.github.io"+s);
 	$(document).ready(function () {
 	if(s){
 	$("#wiki1").attr("href","https://carhq2.coding-pages.com"+s);
