@@ -20,11 +20,12 @@
 		  var s=GetQueryString("s")||0;
 		  var title=GetQueryString("title")||0;
 	$(document).ready(function () {
-	if(s){$('#wiki1').text('维基百科镜像1');$('#wiki2').text('维基百科镜像2');$('#wiki3').text('维基百科镜像3');$('#wiki4').text('维基百科镜像4');
+	if(s){$('#wiki1').text('维基百科镜像1');$('#wiki2').text('维基百科镜像2');$('#wiki3').text('维基百科镜像3');$('#wiki4').text('维基百科镜像4');$('#wiki5').text('维基百科镜像5（部分内容进行改编/屏蔽以符合中国大陆政策）');
 	$("#wiki1").attr("href","https://mwiki.upupming.now.sh/wiki/"+s);
 	$("#wiki2").attr("href","https://zh.jinzhao.wiki/wiki/"+s);
 	$("#wiki3").attr("href","https://zh-wikipedia.mirror.wit.im/wiki/"+s);
 	$("#wiki4").attr("href","http://www.bosimedia.com/wiki/"+s);
+	$("#wiki5").attr("href","https://www.wanweibaike.com/wiki-"+s);
 	$("#wikimo").attr("href","https://zh.m.wikipedia.org/wiki/"+s);
 	$("#wikio").attr("href","https://zh.wikipedia.org/wiki/"+s);
 	}
@@ -49,6 +50,7 @@
 <h2><a id='wiki2' target="_blank" rel="noopener"></a></h2>
 <h2><a id='wiki3' target="_blank" rel="noopener"></a></h2>
 <h2><a id='wiki4' target="_blank" rel="noopener"></a></h2>
+<h2><a id='wiki5' target="_blank" rel="noopener"></a></h2>
 <h2><a id='wikimo' target="_blank" rel="noopener" href='https://zh.m.wikipedia.org/wiki/'>维基百科手机（需科学上网）</a></h2>
 <h2><a id='wikio' target="_blank" rel="noopener" href='https://zh.wikipedia.org/wiki/'>维基百科PC（需科学上网）</a></h2>
 <div class=hr></div>
