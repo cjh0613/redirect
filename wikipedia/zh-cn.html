@@ -20,12 +20,12 @@
 		  var s=GetQueryString("s")||0;
 		  var title=GetQueryString("title")||0;
 	$(document).ready(function () {
-	if(s){$('#wiki1').text('维基百科镜像1');$('#wiki2').text('维基百科镜像2');$('#wiki3').text('维基百科镜像3');$('#wiki4').text('维基百科镜像4');$('#wiki5').text('维基百科镜像5（部分内容进行改编/屏蔽以符合中国大陆政策）');
-	$("#wiki1").attr("href","https://mwiki.upupming.now.sh/wiki/"+s);
+	if(s){$('#wiki1').text('维基百科镜像1（部分内容进行改编/屏蔽以符合中国大陆政策）');$('#wiki2').text('维基百科镜像2');$('#wiki3').text('维基百科镜像3');$('#wiki4').text('维基百科镜像4');$('#wiki5').text('维基百科镜像5');
+	$("#wiki1").attr("href","https://www.wanweibaike.com/wiki-"+s);
 	$("#wiki2").attr("href","https://zh.jinzhao.wiki/wiki/"+s);
 	$("#wiki3").attr("href","https://zh-wikipedia.mirror.wit.im/wiki/"+s);
 	$("#wiki4").attr("href","http://www.bosimedia.com/wiki/"+s);
-	$("#wiki5").attr("href","https://www.wanweibaike.com/wiki-"+s);
+	$("#wiki5").attr("href","https://mwiki.upupming.now.sh/wiki/"+s);
 	$("#wikimo").attr("href","https://zh.m.wikipedia.org/wiki/"+s);
 	$("#wikio").attr("href","https://zh.wikipedia.org/wiki/"+s);
 	}
@@ -45,7 +45,7 @@
 <h2>继续访问维基百科：</h2>
 <p>请尝试点击下方“维基百科镜像”进入查看。但是你的访问可能会被浏览器以“第三方网页”、“内容不安全”、“被多人投诉”等理由恶意拦截。您可以换用其他浏览器进行访问，如下方我们推荐的浏览器。</p>
 <p>（如果您被手机QQ/微信等软件内置的浏览器拦截，按右上角按钮尝试用其他浏览器打开）</p>
-<p>继续访问传送：</p>
+<p>继续访问传送(必须指定条目才会显示镜像)：</p>
 <h2><a id='wiki1' target="_blank" rel="noopener"></a></h2>
 <h2><a id='wiki2' target="_blank" rel="noopener"></a></h2>
 <h2><a id='wiki3' target="_blank" rel="noopener"></a></h2>
