@@ -1,0 +1,83 @@
+<!DOCTYPE html> <html lang=zh-CN><meta charset=utf-8>
+<meta name=renderer content=webkit>
+<meta name=force-rendering content=webkit>
+<meta http-equiv=X-UA-Compatible content="IE=Edge,chrome=1">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title> 准备访问维基百科……</title>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	function GetQueryString(name) {
+		          var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+		          var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+		          var context = ""; 
+		 
+		      if (r != null) 
+		      context = r[2]; 
+		     reg = null; 
+		     r = null; 
+		     return context == null || context == "" || context == "undefined" ? "" : context; 
+		  }
+		  var s=GetQueryString("s")||0;
+		  var title=GetQueryString("title")||0;
+	$(document).ready(function () {
+	if(s){$('#wiki1').text('维基百科镜像1（部分内容进行改编/屏蔽以符合中国大陆政策）');$('#wiki2').text('维基百科镜像2');$('#wiki3').text('维基百科镜像3');//$('#wiki4').text('维基百科镜像4');$('#wiki5').text('维基百科镜像5');
+	$("#wiki1").attr("href","https://en.wanweibaike.com/wiki-"+s);
+	$("#wiki2").attr("href","https://en.jinzhao.wiki/wiki/"+s);
+	$("#wiki3").attr("href","https://en-wikipedia.mirror.wit.im/wiki/"+s);
+	$("#wiki4").attr("href","http://www.bosimedia.com/wiki/"+s);
+	$("#wiki5").attr("href","https://mwiki.upupming.now.sh/wiki/"+s);
+	$("#wikimo").attr("href","https://zh.m.wikipedia.org/wiki/"+s);
+	$("#wikio").attr("href","https://zh.wikipedia.org/wiki/"+s);
+	}
+	 })
+
+</script>
+<meta name=description content=维基百科（Wikipedia）是世界上最大的自由内容、公开编辑且多语言的网络百科全书协作项目，通过Wiki技术使得包括您在内的所有人都可以简单地使用网页浏览器修改其中的内容。当前是全球网络上最大且最受大众欢迎的参考工具书，名列全球十大最受欢迎的网站。>
+<meta http-equiv=Cache-Control content=no-siteapp>
+<meta http-equiv=Cache-Control content=no-transform>
+<style>html,body,div,span,h1,h2,p,a,img,b,ul,li{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}ul{list-style:none}*,::after,::before{box-sizing:border-box}a{text-decoration:none;color:#0072c6}a:hover{text-decoration:none;color:#004d8c}body{text-align:center;font-size:14px;line-height:24px;font-family:Microsoft YaHei,'宋体',sans-serif;color:#454545;overflow-y:scroll}.page{width:960px;margin:0 auto;padding:10px;text-align:left}h2{font-family:Microsoft YaHei}h1{font-size:40px;line-height:60px;font-weight:100;margin:20px 0 15px}h2{font-size:20px;line-height:25px;font-weight:100;margin:10px 0}ul li{list-style-type:disc;list-style-position:inside}b{font-weight:bold}p{margin-bottom:10px}.hr{margin:20px 0;border:0;width:100%;height:1px;overflow:hidden;background-color:#ccc}.clearleft{clear:left;content:""}.browser-list{margin:16px 0 10px;padding:0;height:42px}.browser{display:block;width:155px;height:34px;line-height:22px;float:left;list-style:none}.browser.clearleft{height:1px}.browser span{display:block;font-size:12px;line-height:1.2}.browser img{width:34px;height:34px;border:0;float:left;margin-right:10px}.browser.firefox{width:150px}.browser.edge{width:150px}.browser.ie2345{width:170px}.browser.se360{width:160px}.browser.qqbrowser{width:140px}.targetline{word-break:break-all}@media only screen and (max-width:959px){.page{max-width:100%;padding:20px;font-size:16px;line-height:26px}h1{font-size:26px;line-height:1.8;font-weight:bold;margin-top:0}.browser-list{height:auto}.browser{margin:0 20px 20px 0}}</style>
+<link rel=icon type=image/x-icon href="https://cdn.jsdelivr.net/gh/cjh0613/Boycott-IE/icon/cloud.ico"></head>
+<body>
+<div class=page>
+<h1>您刚才点击了访问维基百科的链接……</h1>
+<p>维基百科（Wikipedia）是世界上最大的自由内容、公开编辑且多语言的网络百科全书协作项目，通过Wiki技术使得包括您在内的所有人都可以简单地使用网页浏览器修改其中的内容。当前是全球网络上最大且最受大众欢迎的参考工具书，名列全球十大最受欢迎的网站。</p>
+<div class=hr></div>
+<h2>继续访问维基百科：</h2>
+<p>请尝试点击下方“维基百科镜像”进入查看。但是你的访问可能会被浏览器以“第三方网页”、“内容不安全”、“被多人投诉”等理由恶意拦截。您可以换用其他浏览器进行访问，如下方我们推荐的浏览器。</p>
+<p>（如果您被手机QQ/微信等软件内置的浏览器拦截，按右上角按钮尝试用其他浏览器打开）</p>
+<p>继续访问传送(必须指定条目才会显示镜像)：</p>
+<h2><a id='wiki1' target="_blank" rel="noopener"></a></h2>
+<h2><a id='wiki2' target="_blank" rel="noopener"></a></h2>
+<h2><a id='wiki3' target="_blank" rel="noopener"></a></h2>
+<h2><a id='wiki4' target="_blank" rel="noopener"></a></h2>
+<h2><a id='wiki5' target="_blank" rel="noopener"></a></h2>
+<h2><a id='wikimo' target="_blank" rel="noopener" href='https://en.m.wikipedia.org/wiki/'>维基百科手机（需科学上网）</a></h2>
+<h2><a id='wikio' target="_blank" rel="noopener" href='https://en.wikipedia.org/wiki/'>维基百科PC（需科学上网）</a></h2>
+<div class=hr></div>
+<h2>推荐使用的浏览器</h2>
+<p class=targetline>推荐使用以下浏览器访问，点击它们进入其官方网站进行下载。如果你的设备已有以下浏览器直接使用即可。</p>
+<p>（但请不要使用手机QQ/微信等软件内置的浏览器进行下载，否则您可能被引导下载应用宝等垃圾软件）</p>
+<ul id=browser-list class=browser-list>
+<li class="browser opera">
+<a target="_blank" rel="noopener" href="https://www.opera.com/zh-cn" id=browser-opera-link><img src="https://cdn.jsdelivr.net/gh/cjh0613/Boycott-IE/icon/opera.png" width=34 height=34 alt=欧朋浏览器>欧朋浏览器 <span id=browser-opera-badge>Opera</span></a>
+</li>
+ <li class="browser chrome">
+ <a target="_blank" rel="noopener" href="https://www.google.cn/chrome/" id=browser-chrome-link><img src="https://cdn.jsdelivr.net/gh/cjh0613/Boycott-IE/icon/chrome.png" width=34 height=34 alt=谷歌浏览器>谷歌浏览器 <span id=browser-chrome-badge>Google Chrome</span></a>
+ </li>
+ <li class="browser firefox">
+ <a target="_blank" rel="noopener" href="https://www.mozilla.org/" id=browser-firefox-link><img src="https://cdn.jsdelivr.net/gh/cjh0613/Boycott-IE/icon/firefox.png" width=34 height=34 alt=火狐浏览器>火狐浏览器<span id=browser-firefox-badge>Mozilla Firefox</span></a>
+ </li>
+ <li class="browser edge">
+ <a target="_blank" rel="noopener" href=https://www.microsoft.com/zh-cn/windows/microsoft-edge id=browser-edge-link><img src="https://cdn.jsdelivr.net/gh/cjh0613/Boycott-IE/icon/edge.png" width=34 height=34 alt=微软浏览器>微软浏览器<span id=browser-edge-badge>Microsoft Edge</span></a>
+ </li>
+ 
+ <li class="browser clearleft"></li>
+</ul>
+<div class=hr></div>
+<h2>为什么会出现这个页面？</h2>
+<p>1、为您提供可供访问的参考资料链接。</p>
+<p>2、为向您说明您的访问可能会被浏览器恶意拦截。</p>
+<div class=hr></div>
+<h2>如何使用这个导向wikipedia页面的链接？</h2>
+<p>您可以参考这个说明：</p>
+<p><a target="_blank" rel="noopener" href="https://cjh0613.github.io/blog/20200429wikipediaRedirect.html">https://cjh0613.github.io/blog/20200429wikipediaRedirect.html</a></p>
