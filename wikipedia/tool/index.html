@@ -1,0 +1,86 @@
+<!DOCTYPE html> <html lang=zh-CN><meta charset=utf-8>
+<meta name=renderer content=webkit>
+<meta name=force-rendering content=webkit>
+<meta http-equiv=X-UA-Compatible content="IE=Edge,chrome=1">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title> 准备生成访问维基百科的链接……</title>
+<script src = "https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+<meta name=description content=维基百科（Wikipedia）是世界上最大的自由内容、公开编辑且多语言的网络百科全书协作项目，通过Wiki技术使得包括您在内的所有人都可以简单地使用网页浏览器修改其中的内容。当前是全球网络上最大且最受大众欢迎的参考工具书，名列全球十大最受欢迎的网站。>
+<meta http-equiv=Cache-Control content=no-siteapp>
+<meta http-equiv=Cache-Control content=no-transform>
+<style>html,body,div,span,h1,h2,p,a,img,b,ul,li{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}ul{list-style:none}*,::after,::before{box-sizing:border-box}a{text-decoration:none;color:#0072c6}a:hover{text-decoration:none;color:#004d8c}body{text-align:center;font-size:14px;line-height:24px;font-family:Microsoft YaHei,'宋体',sans-serif;color:#454545;overflow-y:scroll}.page{width:960px;margin:0 auto;padding:10px;text-align:left}h2{font-family:Microsoft YaHei}h1{font-size:40px;line-height:60px;font-weight:100;margin:20px 0 15px}h2{font-size:20px;line-height:25px;font-weight:100;margin:10px 0}ul li{list-style-type:disc;list-style-position:inside}b{font-weight:bold}p{margin-bottom:10px}.hr{margin:20px 0;border:0;width:100%;height:1px;overflow:hidden;background-color:#ccc}.clearleft{clear:left;content:""}.browser-list{margin:16px 0 10px;padding:0;height:42px}.browser{display:block;width:155px;height:34px;line-height:22px;float:left;list-style:none}.browser.clearleft{height:1px}.browser span{display:block;font-size:12px;line-height:1.2}.browser img{width:34px;height:34px;border:0;float:left;margin-right:10px}.browser.firefox{width:150px}.browser.edge{width:150px}.browser.ie2345{width:170px}.browser.se360{width:160px}.browser.qqbrowser{width:140px}.targetline{word-break:break-all}@media only screen and (max-width:959px){.page{max-width:100%;padding:20px;font-size:16px;line-height:26px}h1{font-size:26px;line-height:1.8;font-weight:bold;margin-top:0}.browser-list{height:auto}.browser{margin:0 20px 20px 0}}</style>
+
+<body>
+<div class=page>
+<h1>维基百科定向链接生成器</h1>
+<p>维基百科（Wikipedia）是世界上最大的自由内容、公开编辑且多语言的网络百科全书协作项目，通过Wiki技术使得包括您在内的所有人都可以简单地使用网页浏览器修改其中的内容。当前是全球网络上最大且最受大众欢迎的参考工具书，名列全球十大最受欢迎的网站。</p>
+<p>为了便于中国大陆访客浏览，您可以使用本生成器生成一个导向维基百科镜像站的链接。</p>
+<div class=hr></div>
+<h2>开始生成：</h2>
+
+维基百科语言版本：
+	<input type="radio" class="cb-radio" id="r1" name="language" value="zh-cn"/>简体中文
+	<input type="radio" class="cb-radio cb-gap2" id="r2" name="language" value="en"/>英文<br>
+	选择重定向服务器：
+	<input type="radio" class="cb-radio" id="r3" name="server" value="github"/>Github（推荐）
+	<input type="radio" class="cb-radio cb-gap2" id="r4" name="server" value="bitbucket"/>Bitbucket<br>
+在这里输入条目：<input type="text" id="url" value = "">（检测到此框变动时自动生成） <!--button type = "button" id = "btn">生成</button--><br>
+<button type = "button" id = "btn2">复制后面的网址</button><input size="100" type="text" id="url2" value = ""><br>
+<button type = "button" id = "btn3">复制后面的md</button><input size="100" type="text" id="url3" value = ""><br>
+<button type = "button" id = "btn4">复制后面的md</button><input size="100" type="text" id="url4" value = ""><br>
+<button type = "button" id = "btn5">复制后面的html</button><input size="100" type="text" id="url5" value = ""><br>
+<button type = "button" id = "btn6">复制后面的html</button><input size="100" type="text" id="url6" value = ""><br>
+<script type="text/javascript">
+	var s;
+	$(document).ready(function () {
+		var flag='0';
+		$("#r1").eq(0).attr("checked", true);
+		$("#r3").eq(0).attr("checked", true);
+		$("#url").bind("input propertychange",function(event){
+			var language  = $('input[name="language"]:checked').val();
+			var server  = $('input[name="server"]:checked').val();
+			var CJHlink="https://cjh0613."+server+".io/redirect/wikipedia/"+language+"?=";
+		       var a=$("#url").val();
+			   $("#url").attr("value",a);
+			   s=$("#url").attr("value");
+			     $("#url2").attr("value",CJHlink+s);
+			   $("#url3").attr("value","[]("+CJHlink+s+")");
+			   $("#url4").attr("value","["+CJHlink+s+"]("+CJHlink+s+")");
+			   $("#url5").attr("value",'<a href="'+CJHlink+s+'" target="_blank" rel="noopener noreferrer"></a>');
+			   $("#url6").attr("value",'<a href="'+CJHlink+s+'" target="_blank" rel="noopener noreferrer">'+CJHlink+s+'</a>');
+			   flag='1';
+		});
+		
+		
+		$("#btn2").click(function(){
+			var url2 = document.getElementById("url2");
+			url2.select();
+			document.execCommand("Copy");
+		  });
+		$("#btn3").click(function(){
+			var url3 = document.getElementById("url3");
+			url3.select();
+			document.execCommand("Copy");
+		  });
+		$("#btn4").click(function(){
+			var url4 = document.getElementById("url4");
+			url4.select();
+			document.execCommand("Copy");
+		  });
+		$("#btn5").click(function(){
+			var url5 = document.getElementById("url5");
+			url5.select();
+			document.execCommand("Copy");
+		  });
+		$("#btn6").click(function(){
+			var url6 = document.getElementById("url6");
+			url6.select();
+			document.execCommand("Copy");
+		  });
+	 })
+</script>
+<div class=hr></div>
+<h2>关于这个定向链接生成器</h2>
+<p>您可以参考这个说明：</p>
+<p><a target="_blank" rel="noopener" href="https://cjh0613.github.io/blog/20200429wikipediaRedirect.html">https://cjh0613.github.io/blog/20200429wikipediaRedirect.html</a></p>
+<div style="display:none"><script type="text/javascript" src="//js.users.51.la/20797113.js"></script><script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278919106&web_id=1278919106"></script></div>
