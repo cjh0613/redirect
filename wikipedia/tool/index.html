@@ -44,7 +44,7 @@
 		$("#wikiKW").bind("input propertychange",function(event){
 			var language  = $('input[name="language"]:checked').val();
 			var server  = $('input[name="server"]:checked').val();
-			var CJHlink="https://cjh0613."+server+".io/redirect/wikipedia/"+language+"?=";
+			var CJHlink="https://cjh0613."+server+".io/redirect/wikipedia/"+language+".html?=";
 		       var a=$("#wikiKW").val();
 			   a=encodeURI(a);
 			   $("#wikiKW").attr("value",a);
