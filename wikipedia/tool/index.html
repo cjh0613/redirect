@@ -12,7 +12,7 @@
 
 <body>
 <div class=page>
-<h1>维基百科定向链接生成器</h1>
+<h1>维基百科引用链接生成器</h1>
 <p>维基百科（Wikipedia）是世界上最大的自由内容、公开编辑且多语言的网络百科全书协作项目，通过Wiki技术使得包括您在内的所有人都可以简单地使用网页浏览器修改其中的内容。当前是全球网络上最大且最受大众欢迎的参考工具书，名列全球十大最受欢迎的网站。</p>
 <p>为了便于中国大陆访客浏览，您可以使用本生成器生成一个导向维基百科镜像站的链接。</p>
 <p>只需在链接后添加原维基百科页链接“https://zh.wikipedia.org/wiki/”之后的内容即可，如对原始页面“https://zh.wikipedia.org/wiki/碳”，只需在下方条目输入框输入“碳”。</p>
@@ -25,7 +25,7 @@
 	选择重定向服务器：
 	<input type="radio" class="cb-radio" id="r3" name="server" value="github"/>Github（推荐）
 	<input type="radio" class="cb-radio cb-gap2" id="r4" name="server" value="bitbucket"/>Bitbucket<br>
-在这里输入条目：<input type="text" id="url" value = "">（检测到此框变动时自动生成） <!--button type = "button" id = "btn">生成</button--><br>
+在这里输入条目：<input type="text" id="wikiKW" value = "">（检测到此框变动时自动生成链接，请先选择上方单选再填写此框） <!--button type = "button" id = "btn">生成</button--><br>
 <button type = "button" id = "btn2">复制后面的网址</button><input size="100" type="text" id="url2" value = ""><br>
 <button type = "button" id = "btn3">复制后面的md</button><input size="100" type="text" id="url3" value = ""><br>
 <button type = "button" id = "btn4">复制后面的md</button><input size="100" type="text" id="url4" value = ""><br>
@@ -37,13 +37,13 @@
 		var flag='0';
 		$("#r1").eq(0).attr("checked", true);
 		$("#r3").eq(0).attr("checked", true);
-		$("#url").bind("input propertychange",function(event){
+		$("#wikiKW").bind("input propertychange",function(event){
 			var language  = $('input[name="language"]:checked').val();
 			var server  = $('input[name="server"]:checked').val();
 			var CJHlink="https://cjh0613."+server+".io/redirect/wikipedia/"+language+"?=";
-		       var a=$("#url").val();
-			   $("#url").attr("value",a);
-			   s=$("#url").attr("value");
+		       var a=$("#wikiKW").val();
+			   $("#wikiKW").attr("value",a);
+			   s=$("#wikiKW").attr("value");
 			     $("#url2").attr("value",CJHlink+s);
 			   $("#url3").attr("value","[]("+CJHlink+s+")");
 			   $("#url4").attr("value","["+CJHlink+s+"]("+CJHlink+s+")");
@@ -81,7 +81,7 @@
 	 })
 </script>
 <div class=hr></div>
-<h2>关于这个定向链接生成器</h2>
+<h2>关于这个引用链接生成器</h2>
 <p>您可以参考这个说明：</p>
 <p><a target="_blank" rel="noopener" href="https://cjh0613.github.io/blog/20200429wikipediaRedirect.html">https://cjh0613.github.io/blog/20200429wikipediaRedirect.html</a></p>
 <div style="display:none"><script type="text/javascript" src="//js.users.51.la/20797113.js"></script><script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278919106&web_id=1278919106"></script></div>
