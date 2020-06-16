@@ -21,7 +21,8 @@
 		  var title=GetQueryString("title")||0;
 	$(document).ready(function () {
 	if(s){
-		$('#wiki1').text('维基百科镜像1（部分内容进行改编/屏蔽以符合中国大陆政策）');$('#wiki2').text('维基百科镜像2');$('#wiki3').text('维基百科镜像3');$('#wiki4').text('维基百科镜像4');$('#wiki5').text('维基百科镜像5');
+		$('#wiki1').text('维基百科镜像1');$('#wiki2').text('维基百科镜像2');$('#wiki3').text('维基百科镜像3');$('#wiki4').text('维基百科镜像4');$('#wiki5').text('维基百科镜像5');
+	$('#banTip').text('（上方站点部分内容进行改编/屏蔽以符合中国内地政策，无法访问可尝试下方地址）');
 	$("#wiki1").attr("href","https://www.wanweibaike.com/wiki-"+s);
 	$("#wiki2").attr("href","https://zh.jinzhao.wiki/wiki/"+s);
 	$("#wiki3").attr("href","https://zh-wikipedia.mirror.wit.im/wiki/"+s);
@@ -48,6 +49,7 @@
 <p>（如果您被手机QQ/微信等软件内置的浏览器拦截，按右上角按钮尝试用其他浏览器打开）</p>
 <p>继续访问传送<strong>(必须指定条目才会显示镜像)</strong>：</p>
 <h2><a id='wiki1' target="_blank" rel="noopener"></a></h2>
+<p id='banTip'></p>
 <h2><a id='wiki2' target="_blank" rel="noopener"></a></h2>
 <h2><a id='wiki3' target="_blank" rel="noopener"></a></h2>
 <h2><a id='wiki4' target="_blank" rel="noopener"></a></h2>
