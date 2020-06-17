@@ -23,11 +23,11 @@ https://cjh0613.github.io/redirect/wikipedia/zh-cn.html?s=
 
 点击试试！
 
-{% note success no-icon %}
+
 **提示**
 您可以使用这个在线维基百科引用链接生成工具自动生成上述引用链接：
 <a href="https://cjh0613.github.io/redirect/wikipedia/tool/index.html" target="_blank" rel="noopener noreferrer">https://cjh0613.github.io/redirect/wikipedia/tool/index.html</a>
-{% endnote %}
+
 
 
 同理，英文版维基百科引用链接：
